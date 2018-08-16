@@ -1,7 +1,7 @@
 # my-intellij-postfix-templates
 Custom Postfix Templates for Intellij IDEA. 自定义postfix模板
 
-* 添加内容，在`## IDEA development templates ##`追加
+* 添加内容，在`## IDEA development templates ##`前追加
 
 ```java
 
