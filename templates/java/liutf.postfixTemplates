@@ -37,3 +37,9 @@
 
 .checkNotNull : Preconditions.checkNotNull
 	java.lang.Object     	 →  Preconditions.checkNotNull($expr$);$END$
+	
+.error : log.error
+	java.lang.Object     	 →  log.error("$END$,$expr$:{}",$expr$);
+	
+.info : log.info
+	java.lang.Object     	 →  log.info("$expr$:{}",$expr$);	
