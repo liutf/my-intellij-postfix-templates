@@ -3,7 +3,7 @@ Custom Postfix Templates for Intellij IDEA. 自定义postfix模板
 
 > v2.x 版本
 
-
+![](http://7viho5.com1.z0.glb.clouddn.com/20180907215017.png)
 
 
 
