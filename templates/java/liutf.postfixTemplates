@@ -39,7 +39,7 @@
 	java.lang.Object     	 →  Preconditions.checkNotNull($expr$);$END$
 
 .checkArgument : Preconditions.checkArgument
-	java.lang.Object     	 →  Preconditions.checkArgument($END$,$expr$);
+	java.lang.Object     	 →  Preconditions.checkArgument($expr$ $END,"$expr$");
 
 	
 .error : log.error
