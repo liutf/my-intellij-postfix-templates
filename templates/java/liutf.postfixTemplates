@@ -41,9 +41,10 @@
 .checkArgument : Preconditions.checkArgument
 	java.lang.Object     	 →  Preconditions.checkArgument($END$,$expr$);
 
+	
 .error : log.error
-	java.lang.Object     	 →  log.error("$END$,$expr$:{}",$expr$);
-
+	java.lang.Object     	 →  log.error("$END.$expr$:{}",$expr$);
+	
 .info : log.info
-	java.lang.Object     	 →  log.info("$expr$:{}",$expr$);	
+	java.lang.Object     	 →  log.info("$expr$:{}",$expr$);
 	
