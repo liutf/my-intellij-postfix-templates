@@ -1,7 +1,7 @@
 ### liutf ###
 
 .newi : new instance
-	CLASS                    →  $expr$ $var:suggestVariableName()$ = new $expr$();
+	CLASS                    →  $expr$ $var:suggestVariableName()$ = new $expr$()
 
 .ifEquals : StringUtils equals
 	java.lang.String     	 →  if (StringUtils.equals("$END$",$expr$)){\
@@ -33,22 +33,22 @@
 	                                                       }
 
 .checkNotBlank : Precondition checkArgumentNotBlank
-	java.lang.String     	 →  Precondition.checkIsNotBlank("$expr$",$expr$);$END$
+	java.lang.String     	 →  Precondition.checkIsNotBlank("$expr$",$expr$)$END$
 
 .checkNotNull : Preconditions.checkNotNull
-	java.lang.Object     	 →  Preconditions.checkNotNull($expr$);$END$
+	java.lang.Object     	 →  Preconditions.checkNotNull($expr$)$END$
 
 .checkArgument : Preconditions.checkArgument
-	java.lang.Object     	 →  Preconditions.checkArgument($expr$ $END$);
+	java.lang.Object     	 →  Preconditions.checkArgument($expr$ $END$)
 
 .checkArgumentIsNumeric : Preconditions.checkArgument-isNumeric
-	java.lang.Object     	 →  Preconditions.checkArgument(StringUtils.isNumeric($expr$), "$expr$ 必须为数字");$END$
+	java.lang.Object     	 →  Preconditions.checkArgument(StringUtils.isNumeric($expr$), "$expr$ 必须为数字")$END$
 
 
 	
 .error : log.error
-	java.lang.Object     	 →  log.error("$END$ 错误信息：{}",$expr$);
+	java.lang.Object     	 →  log.error("$END$ 错误信息：{}",$expr$)
 	
 .info : log.info
-	java.lang.Object     	 →  log.info("$expr$:{}",$expr$);
+	java.lang.Object     	 →  log.info("$expr$:{}",$expr$)
 	
