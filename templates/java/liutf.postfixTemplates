@@ -3,31 +3,31 @@
 .newi : new instance
 	CLASS                    →  $expr$ $var:suggestVariableName()$ = new $expr$();
 
-.equals : StringUtils equals
+.ifEquals : StringUtils equals
 	java.lang.String     	 →  if (StringUtils.equals("$END$",$expr$)){\
 	                                                         \
 	                                                       }
 
-.notEmpty : CollectionUtils isNotEmpty
+.ifNotEmpty : CollectionUtils isNotEmpty
 	java.util.Collection     →  if (CollectionUtils.isNotEmpty($expr$)){\
 	                                                         $END$\
 	                                                       }
 
-.isEmpty : CollectionUtils isEmpty
+.ifIsEmpty : CollectionUtils isEmpty
 	java.util.Collection     →  if (CollectionUtils.isEmpty($expr$)){\
 	                                                         $END$\
 	                                                       }
 
-.isNotBlank : StringUtils isNotBlank
+.ifIsNotBlank : StringUtils isNotBlank
 	java.lang.String     	 →  if (StringUtils.isNotBlank($expr$)){\
 	                                                         $END$\
 	                                                       }
-.isBlank : StringUtils isBlank
+.ifIsBlank : StringUtils isBlank
 	java.lang.String     	 →  if (StringUtils.isBlank($expr$)){\
 	                                                         $END$\
 	                                                       }
 
-.isNumeric : StringUtils isNumeric
+.ifIsNumeric : StringUtils isNumeric
 	java.lang.String     	 →  if (StringUtils.isNumeric($expr$)){\
 	                                                         $END$\
 	                                                       }
@@ -40,6 +40,10 @@
 
 .checkArgument : Preconditions.checkArgument
 	java.lang.Object     	 →  Preconditions.checkArgument($expr$ $END$);
+
+.checkArgumentIsNumeric : Preconditions.checkArgument-isNumeric
+	java.lang.Object     	 →  Preconditions.checkArgument(StringUtils.isNumeric($expr$), "$expr$ 必须为数字");$END$
+
 
 	
 .error : log.error
