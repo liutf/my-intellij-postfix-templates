@@ -33,7 +33,7 @@
 	                                                       }
 
 .checkNotBlank : Precondition checkArgumentNotBlank
-	java.lang.String     	 →  Precondition.checkIsNotBlank("$expr$",$expr$);
+	java.lang.String     	 →  Precondition.checkIsNotBlank("$expr$",$expr$);$END$
 
 .checkNotNull : Preconditions.checkNotNull
 	java.lang.Object     	 →  Preconditions.checkNotNull($expr$);$END$
