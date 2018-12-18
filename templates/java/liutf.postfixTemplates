@@ -42,9 +42,16 @@
 	java.lang.Object     	 →  Preconditions.checkArgument($expr$ $END$);
 
 .checkArgumentIsNumeric : Preconditions.checkArgument-isNumeric
-	java.lang.Object     	 →  Preconditions.checkArgument(StringUtils.isNumeric($expr$), "$expr$ 必须为数字");$END$
+	java.lang.Object     	 →  Preconditions.checkArgument(StringUtils.isNotBlank($expr$) && StringUtils.isNumeric($expr$), "$expr$ 必须为数字");$END$
 
+.toJSON : Faston.toJSON
+	java.lang.Object     	 →  JSON.toJSON($expr$);$END$
 
+.toJSONString : Faston.toJSONString
+	java.lang.Object     	 →  JSON.toJSONString($expr$);$END$	
+
+.parseObject : Faston.parseObject
+	java.lang.String     	 →  JSON.parseObject($expr$, $END$);
 	
 .error : log.error
 	java.lang.Object     	 →  log.error("$END$ 错误信息：{}",$expr$);
