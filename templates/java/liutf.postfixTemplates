@@ -20,12 +20,12 @@
 .ifIsEmpty : MapUtils isNotEmpty
 	java.util.Map     →  if (MapUtils.isNotEmpty($expr$)){\
 	                                                         $END$\                                                         
-	                                                     }
+	                                                }
 
 .ifIsEmpty : MapUtils isEmpty
 	java.util.Map     →  if (MapUtils.isEmpty($expr$)){\
 	                                                    $END$\		
-	                                                  }	                                                    
+	                                                }	                                                    
 
 .ifIsNotBlank : StringUtils isNotBlank
 	java.lang.String     	 →  if (StringUtils.isNotBlank($expr$)){\
@@ -36,7 +36,7 @@
 	                                                         $END$\
 	                                                       }
 
-.ifIsNumeric : StringUtils isNumeric
+.ifIsNumeric : NumberUtils isNumeric
 	java.lang.String     	 →  if (NumberUtils.isCreatable($expr$)){\
 	                                                         $END$\
 	                                                       }
