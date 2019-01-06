@@ -42,7 +42,7 @@
 	java.lang.Object     	 →  Preconditions.checkArgument($expr$ $END$);
 
 .checkArgumentIsNumeric : Preconditions.checkArgument-isNumeric
-	java.lang.Object     	 →  Preconditions.checkArgument(StringUtils.isNotBlank($expr$) && StringUtils.isNumeric($expr$), "$expr$ 必须为数字");$END$
+	java.lang.Object     	 →  Preconditions.checkArgument(NumberUtils.isCreatable($expr$), "$expr$ 必须为数字");$END$
 
 .toJSON : Faston.toJSON
 	java.lang.Object     	 →  JSON.toJSON($expr$);$END$
