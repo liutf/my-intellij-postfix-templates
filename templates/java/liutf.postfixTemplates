@@ -8,24 +8,23 @@
 	                                                         \
 	                                                       }
 
-.ifNotEmpty : CollectionUtils isNotEmpty
+.ifNotEmpty : Collection or Map isNotEmpty
 	java.util.Collection     →  if (CollectionUtils.isNotEmpty($expr$)){\
 	                                                         $END$\
 	                                                       }
+	java.util.Map            →  if (MapUtils.isNotEmpty($expr$)){\
+	                                                         $END$\                                                         
+	                                                       }	                                                       
 
-.ifIsEmpty : CollectionUtils isEmpty
+.ifIsEmpty : Collection or Map isEmpty
 	java.util.Collection     →  if (CollectionUtils.isEmpty($expr$)){\
 	                                                         $END$\
 	                                                       }
-.ifIsEmpty : MapUtils isNotEmpty
-	java.util.Map     →  if (MapUtils.isNotEmpty($expr$)){\
-	                                                         $END$\                                                         
-	                                                }
-
-.ifIsEmpty : MapUtils isEmpty
-	java.util.Map     →  if (MapUtils.isEmpty($expr$)){\
+	java.util.Map     		 →  if (MapUtils.isEmpty($expr$)){\
 	                                                    $END$\		
-	                                                }	                                                    
+	                                             }	                                                       
+
+
 
 .ifIsNotBlank : StringUtils isNotBlank
 	java.lang.String     	 →  if (StringUtils.isNotBlank($expr$)){\
