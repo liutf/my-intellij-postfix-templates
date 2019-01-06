@@ -8,21 +8,21 @@
 	                                                         \
 	                                                       }
 
-.ifNotEmpty : Collection or Map isNotEmpty
+.ifNotEmpty : CollectionUtils isNotEmpty
 	java.util.Collection     →  if (CollectionUtils.isNotEmpty($expr$)){\
 	                                                         $END$\
 	                                                       }
-	java.util.Map            →  if (MapUtils.isNotEmpty($expr$)){\
-	                                                         $END$\                                                         
-	                                                       }	                                                       
+	java.util.Map            →  if (MapUtils.isNotEmpty($expr$)) {\
+            						$END$\
+        						}
 
 .ifIsEmpty : Collection or Map isEmpty
 	java.util.Collection     →  if (CollectionUtils.isEmpty($expr$)){\
 	                                                         $END$\
 	                                                       }
-	java.util.Map     		 →  if (MapUtils.isEmpty($expr$)){\
-	                                                    $END$\		
-	                                             }	                                                       
+	java.util.Map     		 →  if (MapUtils.isEmpty($expr$)) {\
+            						$END$\
+        						} 	                                                       
 
 
 
