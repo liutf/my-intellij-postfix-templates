@@ -48,6 +48,9 @@
 
 .checkArgument : Preconditions.checkArgument
 	java.lang.Object     	 →  Preconditions.checkArgument($expr$ $END$);
+	java.lang.Inter     	 →  Preconditions.checkArgument($expr$ $END$);
+	java.lang.Long     	     →  Preconditions.checkArgument($expr$ $END$);
+	java.lang.Boolean     	 →  Preconditions.checkArgument($expr$ $END$);
 
 .checkArgumentIsNumeric : Preconditions.checkArgument-isNumeric
 	java.lang.Object     	 →  Preconditions.checkArgument(NumberUtils.isCreatable($expr$), "$expr$ 必须为数字");$END$
@@ -66,4 +69,8 @@
 	
 .info : log.info
 	java.lang.Object     	 →  log.info("$expr$:{}",$expr$);
+
+
+.format : StrUtil format
+	java.lang.String     	 →  StrUtil.format($expr$);$END$	
 	
