@@ -68,9 +68,9 @@
 	java.lang.Object     	 →  log.error("$END$ 错误信息：{}",$expr$);
 	
 .info : log.info
-	java.lang.Object     	 →  log.info("$expr$:{}",$expr$);
+	java.lang.Object     	 →  log.info("$expr$:{}",$END$);
 
 
 .fmt : StrUtil format
-	java.lang.String     	 →  StrUtil.format($expr$，$END$	);
+	java.lang.String     	 →  StrUtil.format($expr$，$END$	)
 	
