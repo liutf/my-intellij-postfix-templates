@@ -71,6 +71,6 @@
 	java.lang.Object     	 →  log.info("$expr$:{}",$expr$);
 
 
-.format : StrUtil format
-	java.lang.String     	 →  StrUtil.format($expr$);$END$	
+.fmt : StrUtil format
+	java.lang.String     	 →  StrUtil.format($expr$，$END$	);
 	
