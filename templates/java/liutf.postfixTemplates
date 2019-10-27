@@ -72,5 +72,5 @@
 
 
 .fmt : StrUtil format
-	java.lang.String     	 →  StrUtil.format($expr$，$END$	)
+	java.lang.String     	 →  StrUtil.format($expr$,$END$)
 	
